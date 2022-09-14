@@ -22,7 +22,7 @@ import {
 
 function App() {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename={'/GreenShop-site/'}>
       <Switch>
         <Route exact path="/" component={MainPage}/>
         <Route path="/product/:id" component={ProductPage}/>
