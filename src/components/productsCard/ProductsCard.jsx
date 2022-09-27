@@ -1,5 +1,6 @@
 // Libs
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // Styles
 import './productsCard.css'
@@ -19,9 +20,9 @@ function ProductsCard(props) {
         <li className='productsCard'>
             <div className='productsCard__inner'>
                 <div className='productsCard__preview'>
-                    <a className='productsCard__link' href={`${domain}/products/${id}`}>
+                    <Link className='productsCard__link' to={`/product/${0}`}>
                         <img className='productsCard__img' src={preview} alt={name} />
-                    </a>
+                    </Link>
                     {priceWithoutDiscont || discontSize
                         ? (
                             <div className="productsCard__discont">

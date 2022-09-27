@@ -9,7 +9,7 @@ import { filterConfig } from '../../configuration/filter.config';
 import { sale } from '../../configuration/sale.config';
 
 // Components
-import ProductsPriceRange from '../productsPriceRange/ProductsPriceRange';
+import ProductsPriceRange from './productsPriceRange/ProductsPriceRange';
 
 function ProductsListFilter() {
   return (
