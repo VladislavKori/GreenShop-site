@@ -3,6 +3,8 @@ import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import './slider.css';
 
+import {motion} from 'framer-motion'
+
 // Components
 import slides from './slides/imports';
 
@@ -53,7 +55,17 @@ function Slider({ propStile }) {
   );
 
   return (
-    <div className="slider" style={propStile}>
+    <motion.div
+      className="slider"
+      style={propStile}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 50,
+        damping: 20
+      }}
+    >
       <div ref={sliderRef} className="keen-slider">
         {slides.map((item, index) => (
           <div className="keen-slider__slide slider__slide" key={index}>
@@ -78,19 +90,8 @@ function Slider({ propStile }) {
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
 export default Slider;
-
-// (
-// {console.log(item)}
-//
-{
-  /* {item} */
-}
-{
-  /* </div> */
-}
-// ) )
