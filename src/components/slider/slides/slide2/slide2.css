@@ -71,3 +71,43 @@
 .slide2__link:hover {
     background: #1e742f;
 }
+.slide2__img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1250px) {
+    .slide2__title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .slide2__title {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .slide2__img-container {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .slide2__description {
+        font-size: 12px;
+    }
+    .slide2__img-container {
+        width: 150px;
+    }
+} 
+
+@media screen and (max-width: 450px) {
+    .slide2__content {
+    }
+    .slide2__img-container {
+        position: absolute;
+        z-index: 2;
+        filter: blur(10px)
+    }
+} 

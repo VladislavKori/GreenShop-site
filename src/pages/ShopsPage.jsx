@@ -10,7 +10,7 @@ function ShopsPage() {
   return(
     <HeaderFooterLayout>
       <CurrentPage page={['shops']} />
-      <Map propStyle={{margin: '20px 0'}} />
+      <Map propStyle={{margin: '20px 0', position: 'relative', zIndex: 1}} />
       <OrderInfo propStyle={{margin: '50px 0'}} />
     </HeaderFooterLayout>
   )

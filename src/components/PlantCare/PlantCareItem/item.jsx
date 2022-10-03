@@ -1,8 +1,18 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 function PlantCareItem({lessonNum, videosrc, descript}) {
     return (
-        <li className="plantcare__item">
+        <motion.li 
+            className="plantcare__item"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20
+            }}
+        >
             <h1 className="plantcare__title">Lesson {lessonNum}</h1>
             <div className="plantcare__video">
                 <iframe
@@ -16,7 +26,7 @@ function PlantCareItem({lessonNum, videosrc, descript}) {
                 />
             </div>
             <p className="plantcare__text">{descript}</p>
-        </li>
+        </motion.li>
     )
 }
 

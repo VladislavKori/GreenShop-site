@@ -18,3 +18,4 @@ export { default as BlogList } from './blogList/index';
 export { default as Map } from './Map/index';
 export { default as OrderInfo } from './OrderInfo/index';
 export { default as PlantCare } from './PlantCare/index';
+export { default as Cookie } from './cookie/cookie'

@@ -1,6 +1,6 @@
 .plantcare {
   position: relative;
-  z-index: 1000;
+  z-index: 5;
 }
 .plantcare__list {
   list-style: none;

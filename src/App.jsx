@@ -1,5 +1,5 @@
 // Libs
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   BrowserRouter,
   Switch,
@@ -20,9 +20,19 @@ import {
   PlantCarePage
 } from './pages/imports';
 
+// Components
+import { Cookie } from './components/imports';
+
+// Hooks
+import ScrollToTop from './hooks/ScrollToTop';
+
 function App() {
+
   return(
-    <BrowserRouter basename={'/GreenShop-site/'}>
+    <React.Fragment>
+    <Cookie />
+    <BrowserRouter basename={'/GreenShop-site/'}  >
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={MainPage}/>
         <Route path="/product/:id" component={ProductPage}/>
@@ -33,6 +43,7 @@ function App() {
         <Route path="/user/settings/accountdetail" component={AccountDetailSettings} />
       </Switch>
     </BrowserRouter>
+    </React.Fragment>
   )
 }
 export default App;

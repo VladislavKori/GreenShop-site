@@ -1,13 +1,25 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { motion } from "framer-motion"
+import L from 'leaflet'
 
 import './style.css'
 
 import {shops} from '../../configuration/shops.config.js';
 
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
+
 function Map({propStyle}) {
+
   return(
     <motion.div
       className="map"

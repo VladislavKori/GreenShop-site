@@ -40,3 +40,9 @@
 .productsPagination__item_active:hover {
     background: #266933;
 }
+
+@media screen and (max-width: 950px) {
+    .productsPagination {
+        justify-content: center;
+    }
+}

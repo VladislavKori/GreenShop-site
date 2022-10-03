@@ -8,6 +8,11 @@
     position: relative;
 }
 
+#modal-root {
+    position: relative;
+    z-index: 371;
+}
+
 /* Auth Modal */
 .modal__bg-blur {
     position: fixed;
