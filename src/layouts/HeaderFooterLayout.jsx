@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 // Components
-import { Header, Footer } from '../components/imports';
+import { Header, Footer, MobileMenu } from '../components/imports';
 
 function HeaderFooterLayout({ children }) {
     
@@ -12,6 +12,7 @@ function HeaderFooterLayout({ children }) {
       <Header />
       {children}
       <Footer />
+      <MobileMenu />
     </div>
   );
 }

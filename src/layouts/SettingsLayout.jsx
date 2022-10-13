@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Component
-import {Header, UserSettingsSidebar} from '../components/imports'
+import {Header, MobileMenu, UserSettingsSidebar} from '../components/imports'
 
 function SettingsLayout({children}) {
   return (
@@ -12,6 +12,8 @@ function SettingsLayout({children}) {
         <UserSettingsSidebar />
         {children}
       </div>
+
+      <MobileMenu />
     </div>
   )
 }

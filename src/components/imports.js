@@ -19,3 +19,4 @@ export { default as Map } from './Map/index';
 export { default as OrderInfo } from './OrderInfo/index';
 export { default as PlantCare } from './PlantCare/index';
 export { default as Cookie } from './cookie/cookie'
+export { default as MobileMenu } from './mobileMenu/MobileMenu'
